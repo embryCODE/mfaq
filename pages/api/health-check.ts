@@ -1,13 +1,20 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-type Data = {
-  name: string;
-};
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader('Cache-Control', 'no-cache');
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  res.status(200).json({ name: 'Mason Embry' });
+  const healthcheck = {
+    uptime: process.uptime(),
+    responsetime: process.hrtime(),
+    message: 'OK',
+    timestamp: new Date(),
+  };
+
+  try {
+    res.send(healthcheck);
+  } catch (e: any) {
+    console.error(e);
+    healthcheck.message = e.message || 'Not OK';
+    res.status(503).send(healthcheck);
+  }
 }

@@ -1,10 +1,9 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import styles from './index.module.css';
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div className={'tw-p-4 tw-prose'}>
       <Head>
         <title>Mason&apos;s FAQ</title>
         <meta name="description" content="Mason's frequently asked questions" />
