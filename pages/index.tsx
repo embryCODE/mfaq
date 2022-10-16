@@ -1,9 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Container from '../components/shared/Container';
 
 const Home: NextPage = () => {
   return (
-    <div className={'tw-prose tw-mx-auto tw-max-w-7xl tw-px-8 tw-py-12 '}>
+    <Container isProse={true}>
       <Head>
         <title>Mason&apos;s FAQ</title>
         <meta name="description" content="Mason's frequently asked questions" />
@@ -60,7 +61,7 @@ const Home: NextPage = () => {
         try-hard pinterest. Synth four loko mixtape pickled, cray chambray
         franzen poutine stumptown yr taxidermy.
       </p>
-    </div>
+    </Container>
   );
 };
 
