@@ -1,6 +1,7 @@
-import { NextPage } from 'next';
-import Container from '../components/shared/Container';
 import Head from 'next/head';
+import { NextPage } from 'next';
+
+import Container from '../components/shared/Container';
 
 const SignOut: NextPage = () => {
   return (

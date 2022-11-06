@@ -1,4 +1,12 @@
 {
   "plugins": ["cypress"],
-  "extends": ["next/core-web-vitals", "plugin:cypress/recommended"]
+  "extends": ["next/core-web-vitals", "plugin:cypress/recommended"],
+  "rules": {
+    "sort-imports": [
+      "error",
+      {
+        "allowSeparatedGroups": true
+      }
+    ]
+  }
 }

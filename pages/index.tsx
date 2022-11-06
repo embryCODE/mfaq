@@ -1,5 +1,6 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
+import type { NextPage } from 'next';
+
 import Container from '../components/shared/Container';
 
 const Home: NextPage = () => {

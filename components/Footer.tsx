@@ -1,6 +1,6 @@
 import Container from './shared/Container';
 
-export function Footer() {
+const Footer = () => {
   return (
     <footer className="tw-bg-white tw-border-t">
       <Container>
@@ -12,4 +12,6 @@ export function Footer() {
       </Container>
     </footer>
   );
-}
+};
+
+export default Footer;

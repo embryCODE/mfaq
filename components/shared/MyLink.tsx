@@ -1,4 +1,4 @@
-import { forwardRef, HTMLProps } from 'react';
+import { HTMLProps, forwardRef } from 'react';
 import Link from 'next/link';
 import { UrlObject } from 'url';
 import classNames from 'classnames';
